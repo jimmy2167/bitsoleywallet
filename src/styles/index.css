@@ -1,0 +1,30 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+html, body, #root { height: 100%; }
+
+.glass {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.45);
+}
+
+.lux-gradient {
+  background: radial-gradient(1200px 600px at -10% -10%, rgba(142,45,226,0.30), transparent 50%),
+              radial-gradient(1000px 500px at 110% 10%, rgba(74,0,224,0.25), transparent 50%),
+              linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.00));
+}
+
+.btn { @apply px-4 py-3 rounded-xl font-medium transition active:scale-95; background: linear-gradient(135deg, #8E2DE2, #4A00E0); box-shadow: 0 8px 40px rgba(142,45,226,0.35); }
+.btn:hover { box-shadow: 0 12px 48px rgba(142,45,226,0.5); }
+.btn-outline { @apply px-4 py-3 rounded-xl font-medium transition border border-white/15 bg-white/5; }
+.btn-danger { @apply px-4 py-3 rounded-xl font-semibold bg-red-600; }
+
+.input { @apply w-full px-4 py-3 rounded-xl bg-black/30 border border-white/10 outline-none; }
+.label { @apply text-xs uppercase tracking-wide opacity-70; }
+.mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
